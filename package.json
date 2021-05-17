@@ -1,15 +1,26 @@
 {
-  "name": "n8n-nodes-mustache-simple",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "mustache": "^4.2.0"
-  }
+    "name": "n8n-nodes-mustache-simple",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "mustache": "^4.2.0"
+    },
+    "files": [
+        "dist"
+    ],
+    "n8n": {
+        "credentials": [
+            
+        ],
+        "nodes": [
+            "dist/mustacheNode.js"
+        ]
+    }
 }
