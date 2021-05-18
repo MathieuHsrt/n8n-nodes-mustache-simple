@@ -1,6 +1,12 @@
-const mustache = require('mustache')
+import mustache from 'mustache'
+import { IExecuteFunctions } from 'n8n-core';
+import {
+	INodeExecutionData,
+	INodeType,
+	INodeTypeDescription,
+} from 'n8n-workflow';
 
-class MustacheNode {
+class MustacheNode implements INodeType{
     constructor() {
         this.description = {
             displayName: 'Mustache convert',
@@ -26,12 +32,13 @@ class MustacheNode {
             ]
         };
     }
-    async execute() {
+    async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
         const items = this.getInputData();
-        let item;
-        let myString;
-        let output = mustache.render("{{title}} spends", { title: 'coucou' });
-        return this.prepareOutputData(output);
+        let item: INodeExecutionData;
+		let myString: string;
+        let output = mustache.render("{{title}} spends", { title: 'coucou' }) as string;
+
+        item.json['render'] = output;
+        return this.prepareOutputData(items);
     }
 }
-exports.MustacheNode = MustacheNode;

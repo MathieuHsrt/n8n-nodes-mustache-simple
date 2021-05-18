@@ -20,7 +20,7 @@
             
         ],
         "nodes": [
-            "dist/mustacheNode.js"
+            "dist/ExampleNode.node.js"
         ]
     }
 }

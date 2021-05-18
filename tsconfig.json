@@ -1,0 +1,29 @@
+{
+	"compilerOptions": {
+		"lib": [
+			"es2017"
+		],
+		"types": [
+			
+		],
+		"module": "commonjs",
+		"noImplicitAny": true,
+		"removeComments": true,
+		"strictNullChecks": true,
+		"strict": true,
+		"preserveConstEnums": true,
+		"declaration": true,
+		"outDir": "src",
+		"target": "es2017",
+		"sourceMap": true
+	},
+	"include": [
+		"credentials/**/*",
+		"src/**/*",
+		"nodes/**/*",
+		"test/**/*"
+, "src/mynode/mustacheNode.ts"	],
+	"exclude": [
+		"**/*.spec.ts"
+	]
+}
